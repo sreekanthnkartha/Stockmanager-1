@@ -100,7 +100,7 @@ class _StateHome extends State<HomePage> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => PreedictionCall()));
               },
-              title: Text("Pediction"),
+              title: Text("Prediction"),
             ),
             ListTile(
               onTap: () {
