@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Apicalls/ApiCall.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/screens/items.dart';
 import 'package:flutter_application_1/screens/purchase.dart';
@@ -28,6 +29,13 @@ class _StateHome extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {
+                setState(() {});
+              },
+              icon: Icon(Icons.refresh_outlined))
+        ],
         title: Text('HOME PAGE'),
       ),
       body: ListView.builder(
@@ -86,6 +94,13 @@ class _StateHome extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => ReportScreen()));
               },
               title: Text("Report"),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => PreedictionCall()));
+              },
+              title: Text("Pediction"),
             ),
             ListTile(
               onTap: () {
