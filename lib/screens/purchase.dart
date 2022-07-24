@@ -148,7 +148,7 @@ class _PurchaseScreenState extends State<PurchaseSreeen> {
       itms.doc(uid).collection("items").doc(selectedItem!.docId).update({
         "qty": int.parse(_qty.text) + selectedItem!.qty,
         "purchase_price": int.parse(_purchasePrice.text),
-        "sales_price": int.parse(_purchasePrice.text)
+        "sales_price": int.parse(_salesPrice.text)
       });
       Navigator.pop(context);
     } catch (e) {
